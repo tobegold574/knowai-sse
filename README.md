@@ -115,7 +115,7 @@ mypy src/
 
 ## 文档
 
-详细文档请访问：[https://your-org.github.io/knowai-sse/](https://your-org.github.io/knowai-sse/)
+详细文档请访问：[https://tobegold574.github.io/knowai-sse/](https://tobegold574.github.io/knowai-sse/)
 
 ## 贡献
 

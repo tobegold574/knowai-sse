@@ -1,48 +1,60 @@
-[project]
-name = "KnowAI SSE Documentation"
-description = "语义种子扩展引擎文档"
+site_name: KnowAI SSE Documentation
+site_description: 语义种子扩展引擎文档
+site_author: KnowAI Team
 
-[build]
-target = "site"
+repo_name: knowai-sse
+repo_url: https://github.com/your-org/knowai-sse
 
-[markdown]
-extensions = [
-    "pymdownx.highlight",
-    "pymdownx.superfences",
-    "pymdownx.tabbed",
-    "pymdownx.tasklist"
-]
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - attr_list
+  - md_in_html
 
-[theme]
-name = "material"
-language = "zh"
-features = [
-    "navigation.tabs",
-    "navigation.sections",
-    "toc.integrate",
-    "search.suggest",
-    "search.highlight"
-]
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
 
-theme.palette = [
-  { "media": "(prefers-color-scheme: light)", "scheme": "default", "primary": "indigo", "accent": "indigo", "toggle": { "icon": "material/brightness-7", "name": "切换到深色模式" } },
-  { "media": "(prefers-color-scheme: dark)", "scheme": "slate", "primary": "indigo", "accent": "indigo", "toggle": { "icon": "material/brightness-4", "name": "切换到浅色模式" } }
-]
-
-[nav]
-Home = "index.md"
-用户指南 = [
-  "guide/installation.md",
-  "guide/quickstart.md",
-  "guide/concepts.md"
-]
-API 参考 = [
-  "api/expander.md",
-  "api/prompt_mgr.md",
-  "api/llm_client.md",
-  "api/models.md"
-]
-开发者指南 = [
-  "dev/testing.md",
-  "dev/contributing.md"
-]
+nav:
+  - 首页: index.md
+  - 用户指南:
+      - guide/installation.md
+      - guide/quickstart.md
+      - guide/concepts.md
+  - API 参考:
+      - api/expander.md
+      - api/prompt_mgr.md
+      - api/llm_client.md
+      - api/models.md
+  - 开发者指南:
+      - dev/testing.md
+      - dev/contributing.md
