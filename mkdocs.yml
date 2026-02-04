@@ -21,13 +21,8 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        - locale: en
-          name: English
-          build: true
-        - locale: zh
-          name: 中文
-          build: true
-      default_language_only: false
+        en: English
+        zh: 中文
 
 theme:
   name: material
