@@ -17,13 +17,6 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
-plugins:
-  - i18n:
-      default_language: en
-      languages:
-        en: English
-        zh: 中文
-
 theme:
   name: material
   language: en
@@ -31,7 +24,6 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
-    - navigation.indexes
     - toc.integrate
     - search.suggest
     - search.highlight
