@@ -44,14 +44,6 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-extra:
-  alternate:
-    - name: English
-      link: /
-      lang: en
-    - name: 中文
-      link: /zh/
-      lang: zh
 
 nav:
   - Home: index.md
