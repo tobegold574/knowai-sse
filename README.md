@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
-[![中文文档](https://img.shields.io/badge/文档-中文-red.svg)](https://tobegold574.github.io/knowai-sse/zh/)
+[![中文文档](https://img.shields.io/badge/文档-中文-red.svg)](README.zh.md)
 
 Semantic Seed Expander - An intent expander for the KnowAI perception layer. Leveraging LLM's semantic understanding capabilities, it samples and drifts from core themes based on preset values to generate a set of high-knowledge-density search instructions.
 
