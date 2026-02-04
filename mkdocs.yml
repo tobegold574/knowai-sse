@@ -3,7 +3,7 @@ site_description: Semantic Seed Expander Documentation
 site_author: KnowAI Team
 
 repo_name: knowai-sse
-repo_url: https://github.com/your-org/knowai-sse
+repo_url: https://github.com/tobegold574/knowai-sse
 
 markdown_extensions:
   - pymdownx.highlight:

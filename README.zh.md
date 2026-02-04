@@ -23,7 +23,7 @@ pip install knowai-sse
 或从源码安装：
 
 ```bash
-git clone https://github.com/your-org/knowai-sse.git
+git clone https://github.com/tobegold574/knowai-sse.git
 cd knowai-sse
 pip install -e .
 ```

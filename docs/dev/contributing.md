@@ -8,7 +8,7 @@ Thank you for your interest in KnowAI SSE! We welcome all forms of contributions
 
 If you find a bug or have feature suggestions:
 
-1. Check [Issues](https://github.com/your-org/knowai-sse/issues) for existing related issues
+1. Check [Issues](https://github.com/tobegold574/knowai-sse/issues) for existing related issues
 2. If none exists, create a new Issue with detailed description of the problem or suggestion
 
 ### Submit Code

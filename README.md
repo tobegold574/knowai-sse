@@ -24,7 +24,7 @@ pip install knowai-sse
 Or install from source:
 
 ```bash
-git clone https://github.com/your-org/knowai-sse.git
+git clone https://github.com/tobegold574/knowai-sse.git
 cd knowai-sse
 pip install -e .
 ```
