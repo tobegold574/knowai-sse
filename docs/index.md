@@ -1,23 +1,23 @@
 # KnowAI SSE
 
-语义种子扩展引擎 (Semantic Seed Expander) - 知智感知层的意图发散器。
+Semantic Seed Expander - An intent expander for the KnowAI perception layer.
 
-## 简介
+## Introduction
 
-KnowAI SSE 是一个基于大语言模型的语义扩展工具，它能够根据预设的价值观对核心主题进行智能发散，生成高质量的搜索指令。
+KnowAI SSE is a semantic expansion tool based on Large Language Models. It intelligently expands from core themes based on preset values to generate high-quality search instructions.
 
-## 核心特性
+## Core Features
 
-- **价值观驱动的意图发散**：根据星球价值观生成个性化的搜索指令
-- **多渠道支持**：支持 arXiv、Web、RSS 等多种搜索渠道
-- **异步设计**：完全异步实现，支持高并发场景
-- **类型安全**：基于 Pydantic 的严格类型校验
-- **可扩展性**：插件化设计，易于添加新的价值观和搜索渠道
+- **Value-driven Intent Expansion**: Generate personalized search instructions based on planetary values
+- **Multi-channel Support**: Support for arXiv, Web, RSS, and other search channels
+- **Asynchronous Design**: Fully async implementation supporting high-concurrency scenarios
+- **Type Safety**: Strict type validation based on Pydantic
+- **Extensibility**: Plugin-based design, easy to add new values and search channels
 
-## 快速链接
+## Quick Links
 
-- [安装指南](guide/installation.md)
-- [快速开始](guide/quickstart.md)
-- [核心概念](guide/concepts.md)
-- [API 参考](api/)
-- [开发者指南](dev/)
+- [Installation Guide](guide/installation.md)
+- [Quick Start](guide/quickstart.md)
+- [Core Concepts](guide/concepts.md)
+- [API Reference](api/)
+- [Developer Guide](dev/)

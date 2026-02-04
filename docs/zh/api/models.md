@@ -1,10 +1,10 @@
-# Data Models
+# 数据模型
 
-Defines data contracts for KnowAI SSE.
+定义了 KnowAI SSE 的数据契约。
 
 ## PlanetContext
 
-Planet context containing core theme and values mapping.
+星球上下文，包含核心主题和价值观映射。
 
 ```python
 class PlanetContext(BaseModel):
@@ -12,23 +12,23 @@ class PlanetContext(BaseModel):
     values_map: Dict[str, float]
 ```
 
-**Fields:**
+**字段：**
 
-- `theme` (str): Core theme
-- `values_map` (Dict[str, float]): Value weight mapping
+- `theme` (str): 核心主题
+- `values_map` (Dict[str, float]): 价值观权重映射
 
-**Example:**
+**示例：**
 
 ```python
 context = PlanetContext(
-    theme="Embodied Intelligence",
+    theme="具身智能",
     values_map={"radical": 0.8, "ethics": 0.2}
 )
 ```
 
 ## SearchInstruction
 
-Search instruction defining a single search task.
+搜索指令，定义单个搜索任务。
 
 ```python
 class SearchInstruction(BaseModel):
@@ -37,15 +37,15 @@ class SearchInstruction(BaseModel):
     time_range: str
 ```
 
-**Fields:**
+**字段：**
 
-- `channel` (SearchChannel): Search channel (arxiv/web/rss)
-- `query` (str): Search query
-- `time_range` (str): Time range (latest/past_24h/past_week/past_month)
+- `channel` (SearchChannel): 搜索渠道（arxiv/web/rss）
+- `query` (str): 搜索查询语句
+- `time_range` (str): 时间范围（latest/past_24h/past_week/past_month）
 
 ## SearchChannel
 
-Search channel enum.
+搜索渠道枚举。
 
 ```python
 class SearchChannel(str, Enum):
@@ -56,18 +56,18 @@ class SearchChannel(str, Enum):
 
 ## SSEOutput
 
-Expander output containing search instructions.
+扩展器输出，包含搜索指令集。
 
 ```python
 class SSEOutput(BaseModel):
     instructions: List[SearchInstruction]
 ```
 
-**Fields:**
+**字段：**
 
-- `instructions` (List[SearchInstruction]): List of search instructions
+- `instructions` (List[SearchInstruction]): 搜索指令列表
 
-**Example:**
+**示例：**
 
 ```python
 result = await expander.expand(context)

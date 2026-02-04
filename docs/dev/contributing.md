@@ -1,63 +1,63 @@
-# 贡献指南
+# Contributing Guide
 
-感谢您对 KnowAI SSE 的关注！我们欢迎各种形式的贡献。
+Thank you for your interest in KnowAI SSE! We welcome all forms of contributions.
 
-## 如何贡献
+## How to Contribute
 
-### 报告问题
+### Report Issues
 
-如果您发现了 bug 或有功能建议，请：
+If you find a bug or have feature suggestions:
 
-1. 检查 [Issues](https://github.com/your-org/knowai-sse/issues) 是否已有相关问题
-2. 如果没有，创建新的 Issue，详细描述问题或建议
+1. Check [Issues](https://github.com/your-org/knowai-sse/issues) for existing related issues
+2. If none exists, create a new Issue with detailed description of the problem or suggestion
 
-### 提交代码
+### Submit Code
 
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建 Pull Request
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Create a Pull Request
 
-## 开发规范
+## Development Standards
 
-### 代码风格
+### Code Style
 
-- 使用 Black 格式化代码：`black src/ tests/`
-- 使用 Ruff 检查代码：`ruff check src/ tests/`
-- 使用 mypy 进行类型检查：`mypy src/`
+- Format code with Black: `black src/ tests/`
+- Check code with Ruff: `ruff check src/ tests/`
+- Type check with mypy: `mypy src/`
 
-### 测试
+### Testing
 
-- 为新功能添加测试
-- 确保所有测试通过：`pytest tests/ -v`
-- 测试覆盖率不应降低
+- Add tests for new features
+- Ensure all tests pass: `pytest tests/ -v`
+- Test coverage should not decrease
 
-### 文档
+### Documentation
 
-- 为公共 API 添加 docstrings
-- 更新相关文档
+- Add docstrings for public APIs
+- Update relevant documentation
 
-## 提交信息
+## Commit Messages
 
-使用清晰的提交信息：
+Use clear commit messages:
 
-- `feat`: 新功能
-- `fix`: 修复 bug
-- `docs`: 文档更新
-- `style`: 代码格式（不影响功能）
-- `refactor`: 重构
-- `test`: 添加测试
-- `chore`: 构建过程或辅助工具的变动
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation update
+- `style`: Code formatting (no functional changes)
+- `refactor`: Code refactoring
+- `test`: Adding tests
+- `chore`: Build process or auxiliary tool changes
 
-示例：
+Examples:
 
 ```
-feat: 添加新的价值观维度
-fix: 修复 JSON 解析错误
-docs: 更新 API 文档
+feat: add new value dimension
+fix: fix JSON parsing error
+docs: update API documentation
 ```
 
-## 许可证
+## License
 
-通过贡献代码，您同意您的贡献将根据 MIT License 进行许可。
+By contributing code, you agree that your contributions will be licensed under the MIT License.

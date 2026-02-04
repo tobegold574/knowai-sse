@@ -1,78 +1,78 @@
-# 核心概念
+# Core Concepts
 
-## 价值观
+## Values
 
-价值观是 KnowAI SSE 的核心概念，用于指导搜索指令的生成方向。系统支持以下价值观维度：
+Values are the core concept of KnowAI SSE, used to guide the direction of search instruction generation. The system supports the following value dimensions:
 
-### radical (激进主义)
+### radical (Radicalism)
 
-侧重前沿实验室、GitHub 趋势、未发表论文。
+Focus on frontier labs, GitHub trends, unpublished papers.
 
-适用场景：
-- 追踪最新技术突破
-- 发现未发表的研究成果
-- 关注实验性项目
+Use cases:
+- Tracking latest technological breakthroughs
+- Discovering unpublished research
+- Following experimental projects
 
-### ethics (伦理关怀)
+### ethics (Ethical Concern)
 
-关注 AI 伦理、数字鸿沟、技术公平性、社会影响。
+Focus on AI ethics, digital divide, technological fairness, social impact.
 
-适用场景：
-- 技术伦理研究
-- 社会影响评估
-- 公平性分析
+Use cases:
+- Technology ethics research
+- Social impact assessment
+- Fairness analysis
 
-### practical (实用主义)
+### practical (Pragmatism)
 
-关注工程实践、应用案例、落地效果、商业价值。
+Focus on engineering practices, application cases, implementation effects, business value.
 
-适用场景：
-- 工程实践探索
-- 应用案例分析
-- 商业价值评估
+Use cases:
+- Engineering practice exploration
+- Application case analysis
+- Business value assessment
 
-### academic (学术严谨)
+### academic (Academic Rigor)
 
-侧重理论基础、学术严谨性、同行评审、引用分析。
+Focus on theoretical foundations, academic rigor, peer review, citation analysis.
 
-适用场景：
-- 理论研究
-- 学术文献综述
-- 引用关系分析
+Use cases:
+- Theoretical research
+- Academic literature review
+- Citation relationship analysis
 
-### open_source (开源精神)
+### open_source (Open Source Spirit)
 
-关注开源项目、社区生态、开发者工具、协作模式。
+Focus on open source projects, community ecosystem, developer tools, collaboration patterns.
 
-适用场景：
-- 开源项目发现
-- 社区动态追踪
-- 开发者工具探索
+Use cases:
+- Open source project discovery
+- Community dynamic tracking
+- Developer tool exploration
 
-## 搜索渠道
+## Search Channels
 
 ### arxiv
 
-学术文献搜索，支持 LaTeX 语法和 arXiv 搜索操作符。
+Academic literature search, supports LaTeX syntax and arXiv search operators.
 
 ### web
 
-网页搜索，支持 Google Search Operators（如 `filetype:pdf`、`site:edu`）。
+Web search, supports Google Search Operators (e.g., `filetype:pdf`, `site:edu`).
 
 ### rss
 
-RSS 订阅源搜索，适用于追踪特定网站或博客的更新。
+RSS subscription source search, suitable for tracking updates from specific websites or blogs.
 
-## 数据流
+## Data Flow
 
 ```
-PlanetContext (主题 + 价值观)
+PlanetContext (Theme + Values)
     ↓
-PromptManager (构建提示词)
+PromptManager (Build prompts)
     ↓
-LLMClient (调用大模型)
+LLMClient (Call LLM)
     ↓
-Expander (解析响应)
+Expander (Parse response)
     ↓
-SSEOutput (搜索指令集)
+SSEOutput (Search instructions)
 ```

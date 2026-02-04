@@ -1,16 +1,16 @@
-# 安装指南
+# Installation Guide
 
-## 环境要求
+## Requirements
 
-- Python 3.11 或更高版本
+- Python 3.11 or higher
 
-## 使用 pip 安装
+## Install with pip
 
 ```bash
 pip install knowai-sse
 ```
 
-## 从源码安装
+## Install from source
 
 ```bash
 git clone https://github.com/your-org/knowai-sse.git
@@ -18,22 +18,22 @@ cd knowai-sse
 pip install -e .
 ```
 
-## 开发环境安装
+## Development environment
 
 ```bash
 pip install -e ".[dev]"
 ```
 
-这将安装以下开发工具：
+This will install the following development tools:
 
-- pytest：测试框架
-- pytest-asyncio：异步测试支持
-- black：代码格式化
-- ruff：代码检查
-- mypy：类型检查
+- pytest: Testing framework
+- pytest-asyncio: Async testing support
+- black: Code formatting
+- ruff: Code linting
+- mypy: Type checking
 
-## 验证安装
+## Verify installation
 
 ```bash
-python -c "from knowai_sse import Expander; print('安装成功！')"
+python -c "from knowai_sse import Expander; print('Installation successful!')"
 ```

@@ -1,5 +1,5 @@
 site_name: KnowAI SSE Documentation
-site_description: 语义种子扩展引擎文档
+site_description: Semantic Seed Expander Documentation
 site_author: KnowAI Team
 
 repo_name: knowai-sse
@@ -17,13 +17,26 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        - locale: en
+          name: English
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+      default_language_only: false
+
 theme:
   name: material
-  language: zh
+  language: en
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.indexes
     - toc.integrate
     - search.suggest
     - search.highlight
@@ -35,26 +48,35 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: 切换到深色模式
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: 切换到浅色模式
+        name: Switch to light mode
+
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh
 
 nav:
-  - 首页: index.md
-  - 用户指南:
+  - Home: index.md
+  - User Guide:
       - guide/installation.md
       - guide/quickstart.md
       - guide/concepts.md
-  - API 参考:
+  - API Reference:
       - api/expander.md
       - api/prompt_mgr.md
       - api/llm_client.md
       - api/models.md
-  - 开发者指南:
+  - Developer Guide:
       - dev/testing.md
       - dev/contributing.md

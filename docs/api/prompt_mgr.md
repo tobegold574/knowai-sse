@@ -1,8 +1,8 @@
 # PromptManager
 
-提示词管理器，负责根据价值观构建动态提示词。
+Prompt manager responsible for building dynamic prompts based on values.
 
-## 类
+## Class
 
 ### PromptManager
 
@@ -11,7 +11,7 @@ class PromptManager:
     def __init__(self)
 ```
 
-## 方法
+## Methods
 
 ### build_prompts
 
@@ -19,23 +19,23 @@ class PromptManager:
 def build_prompts(self, theme: str, values_map: Dict[str, float]) -> tuple[str, str]
 ```
 
-构建系统提示词和用户提示词。
+Build system prompt and user prompt.
 
-**参数：**
+**Parameters:**
 
-- `theme` (str): 核心主题
-- `values_map` (Dict[str, float]): 价值观权重映射
+- `theme` (str): Core theme
+- `values_map` (Dict[str, float]): Value weight mapping
 
-**返回：**
+**Returns:**
 
-- `tuple[str, str]`: (系统提示词, 用户提示词)
+- `tuple[str, str]`: (system prompt, user prompt)
 
-**示例：**
+**Example:**
 
 ```python
 mgr = PromptManager()
 system_prompt, user_prompt = mgr.build_prompts(
-    theme="机器学习",
+    theme="Machine Learning",
     values_map={"academic": 0.9}
 )
 ```
@@ -46,7 +46,7 @@ system_prompt, user_prompt = mgr.build_prompts(
 def build_system_prompt(self, values_map: Dict[str, float]) -> str
 ```
 
-根据价值观构建系统提示词。
+Build system prompt based on values.
 
 ### build_user_prompt
 
@@ -54,12 +54,12 @@ def build_system_prompt(self, values_map: Dict[str, float]) -> str
 def build_user_prompt(self, theme: str) -> str
 ```
 
-根据主题构建用户提示词。
+Build user prompt based on theme.
 
-## 支持的价值观
+## Supported Values
 
-- `radical`: 激进主义
-- `ethics`: 伦理关怀
-- `practical`: 实用主义
-- `academic`: 学术严谨
-- `open_source`: 开源精神
+- `radical`: Radicalism
+- `ethics`: Ethical Concern
+- `practical`: Pragmatism
+- `academic`: Academic Rigor
+- `open_source`: Open Source Spirit

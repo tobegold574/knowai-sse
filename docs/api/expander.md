@@ -1,8 +1,8 @@
 # Expander
 
-核心逻辑控制器，协调 PromptManager 和 LLMClient 完成意图扩展。
+Core logic controller that coordinates PromptManager and LLMClient to complete intent expansion.
 
-## 类
+## Class
 
 ### Expander
 
@@ -17,14 +17,14 @@ class Expander:
     )
 ```
 
-**参数：**
+**Parameters:**
 
-- `api_key` (str): LLM API 密钥
-- `base_url` (str): API 基础 URL，默认为 DeepSeek
-- `model` (str): 使用的模型名称，默认为 `deepseek-chat`
-- `timeout` (int): 请求超时时间（秒），默认为 30
+- `api_key` (str): LLM API key
+- `base_url` (str): API base URL, defaults to DeepSeek
+- `model` (str): Model name to use, defaults to `deepseek-chat`
+- `timeout` (int): Request timeout in seconds, defaults to 30
 
-## 方法
+## Methods
 
 ### expand
 
@@ -32,21 +32,21 @@ class Expander:
 async def expand(self, context: PlanetContext) -> SSEOutput
 ```
 
-根据给定的上下文扩展搜索指令。
+Expand search instructions based on given context.
 
-**参数：**
+**Parameters:**
 
-- `context` (PlanetContext): 包含主题和价值观的上下文对象
+- `context` (PlanetContext): Context object containing theme and values
 
-**返回：**
+**Returns:**
 
-- `SSEOutput`: 包含搜索指令集的输出对象
+- `SSEOutput`: Output object containing search instructions
 
-**示例：**
+**Example:**
 
 ```python
 context = PlanetContext(
-    theme="具身智能",
+    theme="Embodied Intelligence",
     values_map={"radical": 0.8, "ethics": 0.2}
 )
 result = await expander.expand(context)
@@ -58,9 +58,9 @@ result = await expander.expand(context)
 async def close(self)
 ```
 
-关闭 LLM 客户端连接。
+Close LLM client connection.
 
-## 异常
+## Exceptions
 
-- `LLMParseError`: 响应解析失败
-- `LLMTimeoutError`: 请求超时
+- `LLMParseError`: Response parsing failed
+- `LLMTimeoutError`: Request timeout

@@ -1,6 +1,6 @@
-# Quick Start
+# 快速开始
 
-## Basic Usage
+## 基本使用
 
 ```python
 import asyncio
@@ -14,7 +14,7 @@ async def main():
     )
 
     context = PlanetContext(
-        theme="Embodied Intelligence",
+        theme="具身智能",
         values_map={"radical": 0.8, "ethics": 0.2}
     )
 
@@ -27,11 +27,11 @@ async def main():
 asyncio.run(main())
 ```
 
-## Using Different Values
+## 使用不同的价值观
 
 ```python
 context = PlanetContext(
-    theme="Machine Learning",
+    theme="机器学习",
     values_map={
         "academic": 0.7,
         "practical": 0.3
@@ -39,19 +39,19 @@ context = PlanetContext(
 )
 ```
 
-## Processing Results
+## 处理结果
 
 ```python
 result = await expander.expand(context)
 
 for instruction in result.instructions:
-    print(f"Channel: {instruction.channel}")
-    print(f"Query: {instruction.query}")
-    print(f"Time Range: {instruction.time_range}")
+    print(f"渠道: {instruction.channel}")
+    print(f"查询: {instruction.query}")
+    print(f"时间范围: {instruction.time_range}")
     print("---")
 ```
 
-## Error Handling
+## 错误处理
 
 ```python
 from knowai_sse.exceptions import LLMParseError, LLMTimeoutError
@@ -59,7 +59,7 @@ from knowai_sse.exceptions import LLMParseError, LLMTimeoutError
 try:
     result = await expander.expand(context)
 except LLMParseError as e:
-    print(f"Parse error: {e}")
+    print(f"解析失败: {e}")
 except LLMTimeoutError as e:
-    print(f"Request timeout: {e}")
+    print(f"请求超时: {e}")
 ```

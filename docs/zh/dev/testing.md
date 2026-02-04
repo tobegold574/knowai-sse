@@ -1,45 +1,45 @@
-# Testing Guide
+# 测试指南
 
-## Running Tests
+## 运行测试
 
-### Run all tests
+### 运行所有测试
 
 ```bash
 pytest tests/ -v
 ```
 
-### Run unit tests
+### 运行单元测试
 
 ```bash
 pytest tests/ -v -m "not integration"
 ```
 
-### Run integration tests
+### 运行集成测试
 
-Integration tests require real API keys:
+集成测试需要真实的 API 密钥：
 
 ```bash
 cp tests/.env.example tests/.env
-# Edit tests/.env and fill in real DEEPSEEK_API_KEY
+# 编辑 tests/.env，填入真实的 DEEPSEEK_API_KEY
 pytest tests/ -v -m "integration"
 ```
 
-## Test Structure
+## 测试结构
 
 ```
 tests/
-├── test_schema.py       # Data model tests
-├── test_prompt_mgr.py   # Prompt manager tests
-├── test_llm_client.py   # LLM client tests
-├── test_expander.py     # Core expander tests
-└── test_integration.py  # Integration tests
+├── test_schema.py       # 数据模型测试
+├── test_prompt_mgr.py   # 提示词管理器测试
+├── test_llm_client.py   # LLM 客户端测试
+├── test_expander.py     # 核心扩展器测试
+└── test_integration.py  # 集成测试
 ```
 
-## Writing Tests
+## 编写测试
 
-### Unit Tests
+### 单元测试
 
-Unit tests use mock objects and don't require real API calls.
+单元测试使用 mock 对象，不需要真实的 API 调用。
 
 ```python
 import pytest
@@ -49,7 +49,7 @@ from knowai_sse import Expander
 @pytest.mark.asyncio
 async def test_expand_success():
     expander = Expander(api_key="test-key")
-    context = PlanetContext(theme="Test", values_map={})
+    context = PlanetContext(theme="测试", values_map={})
     
     mock_response = '{"instructions": []}'
     with patch.object(expander.llm_client, 'chat_completion', new=AsyncMock(return_value=mock_response)):
@@ -57,9 +57,9 @@ async def test_expand_success():
         assert len(result.instructions) == 0
 ```
 
-### Integration Tests
+### 集成测试
 
-Integration tests use real API calls.
+集成测试使用真实的 API 调用。
 
 ```python
 import os
@@ -77,10 +77,10 @@ async def test_real_api_call():
         pytest.skip("DEEPSEEK_API_KEY not set")
     
     expander = Expander(api_key=api_key)
-    # Test real API call
+    # 测试真实 API 调用
 ```
 
-## Test Markers
+## 测试标记
 
-- `@pytest.mark.asyncio`: Mark async tests
-- `@pytest.mark.integration`: Mark integration tests
+- `@pytest.mark.asyncio`: 标记异步测试
+- `@pytest.mark.integration`: 标记集成测试

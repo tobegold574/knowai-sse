@@ -1,8 +1,8 @@
 # LLMClient
 
-LLM 适配器，提供统一的异步调用接口。
+LLM adapter providing unified async call interface.
 
-## 类
+## Class
 
 ### LLMClient
 
@@ -18,15 +18,15 @@ class LLMClient:
     )
 ```
 
-**参数：**
+**Parameters:**
 
-- `api_key` (str): API 密钥
-- `base_url` (str): API 基础 URL
-- `model` (str): 模型名称
-- `timeout` (int): 超时时间（秒）
-- `max_retries` (int): 最大重试次数
+- `api_key` (str): API key
+- `base_url` (str): API base URL
+- `model` (str): Model name
+- `timeout` (int): Timeout in seconds
+- `max_retries` (int): Maximum retry count
 
-## 方法
+## Methods
 
 ### chat_completion
 
@@ -40,23 +40,23 @@ async def chat_completion(
 ) -> str
 ```
 
-发送聊天完成请求。
+Send chat completion request.
 
-**参数：**
+**Parameters:**
 
-- `system_prompt` (str): 系统提示词
-- `user_prompt` (str): 用户提示词
-- `temperature` (float): 温度参数，控制随机性
-- `max_tokens` (int): 最大生成 token 数
+- `system_prompt` (str): System prompt
+- `user_prompt` (str): User prompt
+- `temperature` (float): Temperature parameter, controls randomness
+- `max_tokens` (int): Maximum generation tokens
 
-**返回：**
+**Returns:**
 
-- `str`: LLM 响应内容
+- `str`: LLM response content
 
-**异常：**
+**Exceptions:**
 
-- `LLMTimeoutError`: 请求超时
-- `LLMParseError`: 响应解析失败
+- `LLMTimeoutError`: Request timeout
+- `LLMParseError`: Response parsing failed
 
 ### close
 
@@ -64,10 +64,10 @@ async def chat_completion(
 async def close(self)
 ```
 
-关闭客户端连接。
+Close client connection.
 
-## 特性
+## Features
 
-- **自动重试**：失败时自动重试，最多 `max_retries` 次
-- **超时控制**：支持自定义超时时间
-- **异步支持**：完全异步实现，支持高并发
+- **Auto Retry**: Automatically retry on failure, up to `max_retries` times
+- **Timeout Control**: Support custom timeout
+- **Async Support**: Fully async implementation, supports high concurrency

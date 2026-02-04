@@ -3,24 +3,25 @@
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
+[![中文文档](https://img.shields.io/badge/文档-中文-red.svg)](https://tobegold574.github.io/knowai-sse/zh/)
 
-语义种子扩展引擎 (Semantic Seed Expander) - 知智感知层的意图发散器。利用 LLM 的语义理解能力，根据预设的价值观对核心主题进行采样与漂移，生成一组具有高知识密度的搜索指令。
+Semantic Seed Expander - An intent expander for the KnowAI perception layer. Leveraging LLM's semantic understanding capabilities, it samples and drifts from core themes based on preset values to generate a set of high-knowledge-density search instructions.
 
-## 功能特性
+## Features
 
-- **价值观驱动的意图发散**：根据星球价值观生成个性化的搜索指令
-- **多渠道支持**：支持 arXiv、Web、RSS 等多种搜索渠道
-- **异步设计**：完全异步实现，支持高并发场景
-- **类型安全**：基于 Pydantic 的严格类型校验
-- **可扩展性**：插件化设计，易于添加新的价值观和搜索渠道
+- **Value-driven Intent Expansion**: Generate personalized search instructions based on planetary values
+- **Multi-channel Support**: Support for arXiv, Web, RSS, and other search channels
+- **Asynchronous Design**: Fully async implementation supporting high-concurrency scenarios
+- **Type Safety**: Strict type validation based on Pydantic
+- **Extensibility**: Plugin-based design, easy to add new values and search channels
 
-## 安装
+## Installation
 
 ```bash
 pip install knowai-sse
 ```
 
-或从源码安装：
+Or install from source:
 
 ```bash
 git clone https://github.com/your-org/knowai-sse.git
@@ -28,7 +29,7 @@ cd knowai-sse
 pip install -e .
 ```
 
-## 快速开始
+## Quick Start
 
 ```python
 import asyncio
@@ -42,7 +43,7 @@ async def main():
     )
 
     context = PlanetContext(
-        theme="具身智能",
+        theme="Embodied Intelligence",
         values_map={"radical": 0.8, "ethics": 0.2}
     )
 
@@ -55,72 +56,72 @@ async def main():
 asyncio.run(main())
 ```
 
-## 核心概念
+## Core Concepts
 
-### 价值观
+### Values
 
-系统支持以下价值观维度：
+The system supports the following value dimensions:
 
-- **radical**：侧重前沿实验室、GitHub 趋势、未发表论文
-- **ethics**：关注 AI 伦理、数字鸿沟、技术公平性
-- **practical**：关注工程实践、应用案例、落地效果
-- **academic**：侧重理论基础、学术严谨性、同行评审
-- **open_source**：关注开源项目、社区生态、开发者工具
+- **radical**: Focus on frontier labs, GitHub trends, unpublished papers
+- **ethics**: Focus on AI ethics, digital divide, technological fairness
+- **practical**: Focus on engineering practices, application cases, implementation effects
+- **academic**: Focus on theoretical foundations, academic rigor, peer review
+- **open_source**: Focus on open source projects, community ecosystem, developer tools
 
-### 搜索渠道
+### Search Channels
 
-- **arxiv**：学术文献搜索，支持 LaTeX 语法
-- **web**：网页搜索，支持 Google Search Operators
-- **rss**：RSS 订阅源搜索
+- **arxiv**: Academic literature search, supports LaTeX syntax
+- **web**: Web search, supports Google Search Operators
+- **rss**: RSS subscription source search
 
-## 项目结构
+## Project Structure
 
 ```
 knowai-sse/
 ├── src/
 │   └── knowai_sse/
 │       ├── core/
-│       │   ├── expander.py      # 核心逻辑控制器
-│       │   └── prompt_mgr.py    # 提示词管理器
+│       │   ├── expander.py      # Core logic controller
+│       │   └── prompt_mgr.py    # Prompt manager
 │       ├── models/
-│       │   └── schema.py        # 数据契约
+│       │   └── schema.py        # Data contracts
 │       ├── adapters/
-│       │   └── llm_client.py    # LLM 适配器
-│       └── exceptions.py        # 异常定义
+│       │   └── llm_client.py    # LLM adapter
+│       └── exceptions.py        # Exception definitions
 ├── tests/
 ├── examples/
 └── docs/
 ```
 
-## 开发
+## Development
 
 ```bash
-# 安装开发依赖
+# Install development dependencies
 pip install -e ".[dev]"
 
-# 运行测试
+# Run tests
 pytest tests/ -v
 
-# 运行集成测试（需要设置 DEEPSEEK_API_KEY）
+# Run integration tests (requires DEEPSEEK_API_KEY)
 cp tests/.env.example tests/.env
 pytest tests/ -v -m "integration"
 
-# 代码格式化
+# Code formatting
 black src/ tests/
 ruff check src/ tests/
 
-# 类型检查
+# Type checking
 mypy src/
 ```
 
-## 文档
+## Documentation
 
-详细文档请访问：[https://tobegold574.github.io/knowai-sse/](https://tobegold574.github.io/knowai-sse/)
+For detailed documentation, visit: [https://tobegold574.github.io/knowai-sse/](https://tobegold574.github.io/knowai-sse/)
 
-## 贡献
+## Contributing
 
-欢迎贡献！请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详情。
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-## 许可证
+## License
 
-MIT License - 详见 [LICENSE](LICENSE) 文件。
+MIT License - See [LICENSE](LICENSE) file for details.
