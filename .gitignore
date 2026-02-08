@@ -151,3 +151,6 @@ Thumbs.db
 
 # Project specific
 tests/.env
+
+# deployment docs
+./DEPLOYMENT.md
